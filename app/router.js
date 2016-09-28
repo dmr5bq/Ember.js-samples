@@ -7,12 +7,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('about');
+  this.route('about', function () {
+    this.route('skills');
+  });
   this.route('contact');
   this.route('projects');
   this.route('admin', function() {
     this.route('generate_project');
     this.route('view_messages');
+    this.route('edit_skills');
   });
 });
 

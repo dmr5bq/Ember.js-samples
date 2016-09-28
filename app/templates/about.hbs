@@ -1,24 +1,32 @@
-{{outlet}}
 <div class='container'>
  <div class='skills-section'>
-    <h2>My Skills</h2>
-     <div>
-        <span class="label label-success skills-icon">Java</span>
-        <span class="label label-success skills-icon">Python</span>
-        <span class="label label-success skills-icon">HTML</span>
-        <span class="label label-success skills-icon">CSS</span>
-        <span class="label label-success skills-icon">C++</span>
-        <span class="label label-primary skills-icon">PHP</span>
-        <span class="label label-primary skills-icon">JavaScript</span>
-        <span class="label label-primary skills-icon">C</span>
-        <span class="label label-info skills-icon">SQL</span>
-        <span class="label label-info skills-icon">x86 Assembly</span>
-        <span class="label label-info skills-icon">XML</span>
-        <span class="label label-secondary skills-icon">Ember.JS</span>
-        <span class="label label-secondary skills-icon">jQuery</span>
-        <span class="label label-secondary skills-icon">Bootstrap</span>
-        <span class="label label-secondary skills-icon">PostgreSQL</span>
-        <span class="label label-secondary skills-icon">GNU Make</span> 
-     </div>
+     <ul class='nav nav-pills'>
+       {{#link-to 'about.index' tagName='li' class='nav-pill'}}
+           <a href='javascript:void(0);'>About Me</a>
+       {{/link-to}}
+       {{#link-to 'about.skills' tagName='li' class='nav-pill'}}
+           <a href='javascript:void(0);'>My Skills</a>
+       {{/link-to}}
+     </ul>
+   {{outlet}}
  </div>
 </div>
+
+<!--
+      <span class="label label-success skills-icon">Java</span>
+      <span class="label label-success skills-icon">Python</span>
+      <span class="label label-success skills-icon">HTML</span>
+      <span class="label label-success skills-icon">CSS</span>
+      <span class="label label-success skills-icon">C++</span>
+      <span class="label label-primary skills-icon">PHP</span>
+      <span class="label label-primary skills-icon">JavaScript</span>
+      <span class="label label-primary skills-icon">C</span>
+      <span class="label label-info skills-icon">SQL</span>
+      <span class="label label-info skills-icon">x86 Assembly</span>
+      <span class="label label-info skills-icon">XML</span>
+      <span class="label label-secondary skills-icon">Ember.JS</span>
+      <span class="label label-secondary skills-icon">jQuery</span>
+      <span class="label label-secondary skills-icon">Bootstrap</span>
+      <span class="label label-secondary skills-icon">PostgreSQL</span>
+      <span class="label label-secondary skills-icon">GNU Make</span>
+      -->
