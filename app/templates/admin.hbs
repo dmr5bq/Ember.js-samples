@@ -1,13 +1,17 @@
 
 <div class='container'>
-<ul class='nav nav-pills'>
-    {{#link-to 'admin.generate_project' tagName='li' class='nav-pill'}}
-        <a href='javascript:void(0);'>Generate a Project</a>
-    {{/link-to}}
-    {{#link-to 'admin.view_projects' tagName='li' class='nav-pill'}}
-        <a href='javascript:void(0);'>View all Projects</a>
-    {{/link-to}}
-</ul>
+    <h2>Welcome, Administrator</h2>
+    <ul class='nav nav-pills'>
+      {{#link-to 'admin.generate_project' tagName='li' class='nav-pill'}}
+          <a href='javascript:void(0);'>Generate a Project</a>
+      {{/link-to}}
+      {{#link-to 'admin.view_projects' tagName='li' class='nav-pill'}}
+          <a href='javascript:void(0);'>View all Projects</a>
+      {{/link-to}}
+      {{#link-to 'admin.view_messages' tagName='li' class='nav-pill'}}
+          <a href='javascript:void(0);'>View all Messages</a>
+      {{/link-to}}
+    </ul>
     <br><br>
-{{outlet}}
+  {{outlet}}
 </div>

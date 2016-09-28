@@ -16,8 +16,13 @@ export default Ember.Controller.extend({
             const name = this.get('name');
             const email = this.get('email');
             const message = this.get('message');
-    
-            const emaildata = this.store.createRecord('emaildata', {name: name, email: email, message: message });
+
+          const emaildata = this.store.createRecord('emaildata', {
+            name: name,
+            email: email,
+            message: message,
+            datetime: new Date().toLocaleString()
+          });
 
             emaildata.save();
             this.set('response', `We've sent your email. You'll hear back soon!`);

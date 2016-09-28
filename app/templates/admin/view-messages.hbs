@@ -1,2 +1,31 @@
 {{outlet}}
-
+<div class="container-fluid">
+    <h2>View All Messages</h2>
+    <hr>
+    <br>
+    <table class="full-width">
+      {{#each model as |emaildata|}}
+          <br>
+          <tr>
+              <td>
+                  <b><p>{{emaildata.name}}</p></b>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <p>{{emaildata.datetime}}</p>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <p>{{emaildata.email}}</p>
+              </td>
+          </tr>
+          <tr class="separator-border">
+              <td>
+                  <p>{{emaildata.message}}</p>
+              </td>
+          </tr>
+      {{/each}}
+    </table>
+</div>
