@@ -1,0 +1,75 @@
+@import "bootstrap";
+
+body {
+    padding-top: 30px;
+}
+
+.highlight-p {
+    color: #28B17A;
+}
+
+.jumbotron p {
+    font-size: 25px;
+}
+
+.jumbotron p:first-child {
+    font-size: 30px;
+}
+
+.name-highlight-p {
+    color: #76AE02;
+}
+
+.btn-lg {
+    margin-top: 15px;
+    background: #28B17A !important;
+    border: none;
+}
+
+.panel-heading {
+    background: #28B17A;
+    color: #fff;
+}
+
+.panel {
+    border: 1px solid rgba(0,0,0,0.5);
+    height: 500px;
+    width: 30%;
+    margin-right: 2%;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.skills-icon {
+    display: inline-block;
+    font-size: 18px !important;
+    padding: 10px;
+    margin: 5px;
+}
+
+.skills-section div {
+    padding: 2%;
+    width: 70%;
+}
+
+.label-secondary {
+    background:#6534B1;
+}
+
+.jumbotron > div.jt-divided {
+    display: inline-block;
+}
+
+#jt-left {
+    width: 70%;
+}
+
+#jt-right {
+    width: 25%;
+}
+
+.alert {
+    margin-top: 10px;
+}
+

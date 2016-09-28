@@ -1,0 +1,20 @@
+{{outlet}}
+
+<form>
+    <div class="form-group">
+        <label for="name">Enter the Project Name</label>
+        {{input type="text" class="form-control" id="name" area-describedby="emailHelp" placeholder="Enter name" autofocus='autofocus' value=name}}
+    </div>
+    <div class="form-group">
+        <label for="area">Enter the Project Description</label>
+        {{textarea class="form-control" id="area" rows="3" value=description}}
+    </div>
+    <div class="form-group">
+        <label for="linkOut">Enter the Project Link</label>
+        {{input type="text" class="form-control" id="linkOut" area-describedby="emailHelp" placeholder="Enter link to project; if none, enter \"javascript:void(0);\"" autofocus='autofocus' value=linkOut}}
+    </div><br>
+    <button type="submit" class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'submitProject'}}>Submit to the database</button>
+    {{#if response}}
+        <div class="alert alert-success">{{response}}</div>
+    {{/if}}
+</form>

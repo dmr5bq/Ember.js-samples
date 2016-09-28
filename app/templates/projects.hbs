@@ -1,0 +1,16 @@
+<div class='container'>
+    {{#each model as |project|}}
+        <div class='panel'>
+            <div class='panel-heading panel-title'>
+                <p>{{project.name}}</p>
+                {{#if project.inProgress}}
+                    <div class='label label-warning'>In Progress</div>
+                {{/if}}
+            </div>
+            <div class='panel-body'>
+                <p>{{project.description}}</p>
+                <a class='btn btn-success' href={{project.linkOut}}>Learn more.</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

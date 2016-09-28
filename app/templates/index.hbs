@@ -1,0 +1,33 @@
+
+<div class='jumbotron'>
+    <div id='jt-left' class='jt-divided'>
+        <p>I'm <span class='name-highlight-p'>Dominic Ritchey</span></p>
+        <p>I'm a student of Computer Science at the University of Virginia focused in <span class='highlight-p'>web development</span> and <span class='highlight-p'>UX/UI design</span>.</p>
+        {{#link-to 'about'}}<a href="javascript:void(0);" class='btn btn-primary btn-lg'>Learn More</a>{{/link-to}}
+    </div>
+    <div id='jt-right' class="jt-divided">
+    </div>
+</div>
+
+<div class='jumbotron quick-contact'>
+    <p>Get in touch <span class='highlight-p'>right now.</span></p>
+    <form>
+        <div class="form-group">
+            <label for="name">Enter your name</label>
+            {{input type="text" class="form-control" id="name" area-describedby="emailHelp" placeholder="Enter name" autofocus='autofocus' value=name}}
+        </div><br>
+        <div class="form-group">
+            <label for="email">Enter your email address</label>
+            {{input type="email" class="form-control" id="exampleInputEmail1" area-describedby="emailHelp" placeholder="Enter email" value=email}}
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div><br>
+        <div class="form-group">
+            <label for="exampleTextarea">Enter your message.</label>
+            {{textarea class="form-control" id="exampleTextarea" rows="3" value=message}}
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'confirmEmail'}}>Send my message</button>
+        {{#if response}}
+            <div class="alert alert-success">{{response}}</div>
+        {{/if}}
+    </form>
+</div>
