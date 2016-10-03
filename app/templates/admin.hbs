@@ -2,6 +2,9 @@
 <div class='container'>
     <h2>Welcome, Administrator</h2>
     <ul class='nav nav-pills'>
+      {{#link-to 'admin.register_profile' tagName='li' class='nav-pill'}}
+          <a href='javascript:void(0);'>Register a New Profile</a>
+      {{/link-to}}
       {{#link-to 'admin.generate_project' tagName='li' class='nav-pill'}}
           <a href='javascript:void(0);'>Generate a Project</a>
       {{/link-to}}
@@ -10,6 +13,9 @@
       {{/link-to}}
       {{#link-to 'admin.edit_skills' tagName='li' class='nav-pill'}}
           <a href='javascript:void(0);'>Add Skills</a>
+      {{/link-to}}
+      {{#link-to 'admin.edit_about_me' tagName='li' class='nav-pill'}}
+          <a href='javascript:void(0);'>Edit About Me</a>
       {{/link-to}}
     </ul>
     <br><br>

@@ -16,6 +16,8 @@ Router.map(function() {
     this.route('generate_project');
     this.route('view_messages');
     this.route('edit_skills');
+    this.route('edit_about_me');
+    this.route('register_profile');
   });
 });
 

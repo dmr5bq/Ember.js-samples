@@ -1,1 +1,4 @@
-{{outlet}}
+<h2>About Me</h2>
+{{#each model as |aboutdata|}}
+    <p>{{aboutdata.description}}</p>
+{{/each}}
