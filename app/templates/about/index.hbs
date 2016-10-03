@@ -1,4 +1,10 @@
+<br>
 <h2>About Me</h2>
+<hr>
+<br>
 {{#each model as |aboutdata|}}
-    <p>{{aboutdata.description}}</p>
+    <p>{{{aboutdata.description}}}</p>
 {{/each}}
+<br>
+<h4>Check out my {{#link-to 'projects'}}<a href>projects.</a>{{/link-to}}</h4>
+<h4>Give me a shout {{#link-to 'contact'}}<a href>here.</a>{{/link-to}}</h4>
