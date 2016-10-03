@@ -1,9 +1,11 @@
 
 <div class='jumbotron'>
     <div id='jt-left' class='jt-divided'>
-        <p>I'm <span class='name-highlight-p'>Dominic Ritchey</span></p>
-        <p>I'm a student of Computer Science at the University of Virginia focused in <span class='highlight-p'>web development</span> and <span class='highlight-p'>UX/UI design</span>.</p>
+      {{#each model as |profile|}}
+          <p>I'm <span class='name-highlight-p'>{{profile.firstname}} {{profile.lastname}}</span></p>
+          <p>{{{profile.description}}}</p>
         {{#link-to 'about'}}<a href="javascript:void(0);" class='btn btn-primary btn-lg'>Learn More</a>{{/link-to}}
+      {{/each}}
     </div>
     <div id='jt-right' class="jt-divided">
         <img src="assets/images/ritchey.jpg" class="heavy-border">

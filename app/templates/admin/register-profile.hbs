@@ -1,0 +1,26 @@
+<form>
+    <table>
+        <tr>
+            <label for="firstname">First name</label></tr>
+        <tr> {{input type='text' name='firstname' value=firstname}}
+        </tr>
+        <br>
+        <tr>
+            <label for="lastname">Last name</label></tr>
+        <tr> {{input type='text' name='lastname' value=lastname}}
+        </tr>
+        <br>
+        <tr>
+            <label for="age">Age</label></tr>
+        <tr> {{input type='number' name='age' value=age}}
+        </tr>
+        <br>
+        <tr>
+            <label for="description">Description</label></tr>
+        <tr> {{textarea name='description' value=description cols=100 rows=15
+                        placeholder="Tell the world something about yourself"}}
+        </tr>
+        <button type="submit" class="btn btn-primary btn-lg"{{action 'submitProfile'}}>Submit profile</button>
+        <br><br>
+    </table>
+</form>
