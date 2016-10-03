@@ -1,0 +1,16 @@
+<form>
+    <table>
+        <tr><label for="description">Your current description: </label></tr>
+        <tr>
+            <p>{{#each model as |aboutdata|}}
+              {{aboutdata.description}}
+            {{/each}}</p>
+            <br>
+        </tr>
+        <tr><label for="description">Enter the updated description: </label></tr>
+
+        <tr>{{textarea data-provide="markdown" cols="100" rows="15" value=description }}</tr>
+        <button type="submit" class="btn btn-md" {{action 'submitAbout'}}>Send to the database</button>
+    </table>
+
+</form>

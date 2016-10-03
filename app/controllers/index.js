@@ -27,5 +27,6 @@ export default Ember.Controller.extend({
             emaildata.save();
             this.set('response', `We've sent your email. You'll hear back soon!`);
         }
+
     }
 });
