@@ -17,3 +17,19 @@
       <div class="alert alert-success">{{response}}</div>
   {{/if}}
 </form>
+
+<table class="skills-display">
+    <tr>
+        <td><h4>Skill Name</h4></td>
+        <td><h4>Skill Level</h4></td>
+    </tr>
+    <br>
+    {{#each model as |skill|}}
+        <tr>
+            <td><p>{{skill.name}}</p></td>
+            <td><p>{{skill.level}}</p></td>
+            <td><button type="submit" class="btn btn-sm btn-danger" {{action 'deleteSkill' skill}}>Delete</button></td>
+        </tr>
+        <br>
+    {{/each}}
+</table>

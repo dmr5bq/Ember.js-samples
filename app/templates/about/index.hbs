@@ -1,5 +1,19 @@
-<h2>About Me</h2>
+<div class="about-body"><h2>About Me</h2>
 {{#each model as |aboutdata|}}
     <hr>
-    <p>{{{aboutdata.description}}}</p>
+    <div class="about-text">{{{aboutdata.description}}}</div>
 {{/each}}
+
+  <!-- This will be worked into a component and pull its data from a model -->
+  <br>
+  <div class="container">
+  <h3>Want to learn more? </h3>
+  <h4>{{#link-to 'contact'}}Reach out{{/link-to}} to me with any questions.</h4>
+    <h4>Check out {{#link-to 'about.skills'}}my skills{{/link-to}}.</h4>
+  <h4>Find me here: </h4>
+  <ul>
+    <li><h5><a href="http://github.com/dmr5bq">Github</a> (dmr5bq)</h5></li>
+    <li><h5><a href="http://twitter.com/dmr5bq">Twitter</a> (@dmr5bq)</h5></li>
+    <li><h5><a href="https://linkedin.com/in/dominicritchey">LinkedIn</a></h5></li>
+  </ul></div>
+  </div>

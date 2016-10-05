@@ -4,9 +4,7 @@ body {
     padding-top: 30px;
 }
 
-.highlight-p {
-    color: #28B17A;
-}
+
 
 .jumbotron p {
     font-size: 25px;
@@ -16,7 +14,7 @@ body {
     font-size: 30px;
 }
 
-.name-highlight-p {
+.name-highlight-p, .highlight-p {
     color: #76AE02;
 }
 
@@ -94,3 +92,26 @@ body {
   border-bottom: 1px solid #000;
 }
 
+table.skills-display {
+  margin-top: 50px;
+}
+
+table.skills-display td {
+  width: 2%;
+}
+
+.about-text p {
+  font-size: 18px;
+}
+
+.about-text h4 {
+  font-size: 30px;
+}
+
+.about-body .container {
+  padding: 0px;
+}
+
+a {
+  color: #28B17A;
+}
