@@ -13,7 +13,7 @@
         </div><br>
         <div class="form-group">
             <label for="exampleTextarea">Enter your message.</label>
-          {{textarea class="form-control" id="exampleTextarea" rows="3" value=message}}
+            {{textarea class="form-control" id="exampleTextarea" rows="3" value=message}}
         </div>
         <button type="submit" class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'confirmEmail'}}>Send my message</button>
       {{#if response}}
