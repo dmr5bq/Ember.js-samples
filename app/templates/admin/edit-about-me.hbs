@@ -1,16 +1,22 @@
+<h3>Update your "About Me" page</h3>
+<br>
 <form>
     <table>
-        <tr><label for="description">Your current description: </label></tr>
         <tr>
-            <p>{{#each model as |aboutdata|}}
-              {{aboutdata.description}}
-            {{/each}}</p>
+            {{#each model as |aboutdata|}}
+              <p><b>Rendered:</b></p>
+              <p>{{{aboutdata.description}}}</p>
+              <br>
+              <p><b>Raw HTML:</b></p>
+              <p>{{aboutdata.description}}</p>
+              <hr>
+                <tr><label for="description">Enter the updated description: </label></tr>
+
+                <tr>{{textarea data-provide="markdown" cols="100" rows="15" value=description }}</tr>
+                <button type="submit" class="btn btn-md" {{action 'submitAbout' aboutdata}}>Send to the database</button>
+            {{/each}}
             <br>
         </tr>
-        <tr><label for="description">Enter the updated description: </label></tr>
 
-        <tr>{{textarea data-provide="markdown" cols="100" rows="15" value=description }}</tr>
-        <button type="submit" class="btn btn-md" {{action 'submitAbout'}}>Send to the database</button>
     </table>
-
 </form>

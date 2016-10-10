@@ -1,1 +1,42 @@
-{{outlet}}
+
+<div class='jumbotron quick-contact'>
+    <p>Get in touch <span class='highlight-p'>right now.</span></p>
+    <form>
+        <div class="form-group">
+            <label for="name">Enter your name</label>
+          {{input type="text" class="form-control" id="name" area-describedby="emailHelp" placeholder="Enter name" autofocus='autofocus' value=name}}
+        </div><br>
+        <div class="form-group">
+            <label for="email">Enter your email address</label>
+          {{input type="email" class="form-control" id="exampleInputEmail1" area-describedby="emailHelp" placeholder="Enter email" value=email}}
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div><br>
+        <div class="form-group">
+            <label for="exampleTextarea">Enter your message.</label>
+            {{textarea class="form-control" id="exampleTextarea" rows="3" value=message}}
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" disabled={{isDisabled}} {{action 'confirmEmail'}}>Send my message</button>
+      {{#if response}}
+          <div class="alert alert-success">{{response}}</div>
+      {{/if}}
+    </form>
+</div>
+
+<div class="jumbotron">
+    <p>Prefer something more <span class="highlight-p">traditional</span>?</p>
+    <p>Find me here:</p>
+    <ul class="enlarge-text">
+        <li>
+            <p><a href="mailto:dmr5bq@virginia.edu">Shoot me an email</a> at dominicritchey@email.virginia.edu</p>
+        </li>
+        <li>
+           <p><a href="https://linkedin.com/in/dominicritchey">LinkedIn</a></p>
+        </li>
+        <li>
+            <p><a href="http://github.com/dmr5bq">Github</a> (dmr5bq)</p>
+        </li>
+        <li>
+            <p><a href="http://twitter.com/dmr5bq">Twitter</a> (@dmr5bq)</p>
+        </li>
+    </ul>
+</div>
