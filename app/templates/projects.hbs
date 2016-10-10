@@ -1,14 +1,17 @@
 <div class='container'>
+    <h1>Projects</h1><hr>
     {{#each model as |project|}}
-        <div class='panel'>
-            <div class='panel-heading panel-title'>
-                <p>{{project.name}}</p>
-                {{#if project.inProgress}}
-                    <div class='label label-warning'>In Progress</div>
-                {{/if}}
+        <div class="project-pane">
+            <div class="project-pane-header">
+                <b>{{project.name}}</b>
             </div>
-            <div class='panel-body'>
+            <div class="project-pane-body">
                 <p>{{{project.description}}}</p>
+              {{#if project.inProgress}}
+                  <div class='label label-warning'>In Progress</div>
+              {{/if}}
+            </div>
+            <div class="project-pane-footer">
                 <a class='btn btn-success' href={{project.linkOut}}>Learn more.</a>
             </div>
         </div>
