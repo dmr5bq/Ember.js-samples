@@ -1,11 +1,18 @@
 @import "bootstrap";
 
 body {
-    padding-top: 30px;
+
 }
 
+html {
+  padding-bottom: 50px;
+  border-top: 10px solid #28B17A;
+}
 
-
+.navbar-inverse {
+  background: rgba(0,0,0,0.95) !important;
+  border-bottom: 3px solid #28B17A;
+}
 .jumbotron p {
     font-size: 25px;
 }
